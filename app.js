@@ -3,6 +3,7 @@ const helloWorld = require('./controllers/helloWorld');
 const bodyParser = require('body-parser')
 const createShoppingList = require('./controllers/createShoppingList')
 const updateShoppingList = require('./controllers/updateShoppingList');
+const deleteShoppingList = require('./controllers/deleteShoppingList');
 
 const app = express()
 
@@ -18,6 +19,8 @@ app.post('/shopping-lists', createShoppingList)
 // route PUT
 app.put('/shopping-lists/:filename', updateShoppingList)
 
+//route DELETE
+app.delete('/shopping-lists/:filename', deleteShoppingList);
 
 // start web server
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
