@@ -5,6 +5,7 @@ const createShoppingList = require('./controllers/createShoppingList')
 const updateShoppingList = require('./controllers/updateShoppingList');
 const deleteShoppingList = require('./controllers/deleteShoppingList');
 
+// instantiate express
 const app = express()
 
 // middleware
